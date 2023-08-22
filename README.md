@@ -1,4 +1,4 @@
-# New Project
+# To-Do
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
