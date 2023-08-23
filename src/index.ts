@@ -78,6 +78,7 @@ function addListItem(task: Task) {
   list?.appendChild(item); 
 }
 
+
 function deleteTask(task: Task) {
   const taskIndex = tasks.findIndex((t) => t.id === task.id);
   if (taskIndex !== -1) {
