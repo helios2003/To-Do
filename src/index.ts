@@ -60,7 +60,6 @@ function addListItem(task: Task) {
     day: "numeric",
     hour: "numeric",
     minute: "2-digit",
-    second: "2-digit",
     hour12: true,
   });
 
@@ -89,7 +88,18 @@ function deleteTask(task: Task) {
 }
 
 function saveTasks() {
-  localStorage.setItem("TASKS", JSON.stringify(tasks));
+  const tasksToSave = tasks.map(task => ({
+    ...task,
+    createdAt: task.createdAt.toLocaleString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    }),
+  }));
+  localStorage.setItem("TASKS", JSON.stringify(tasksToSave));
 }
 
 function loadTasks(): Task[] {
