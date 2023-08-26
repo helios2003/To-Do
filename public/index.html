@@ -8,17 +8,23 @@
   <link rel="stylesheet" href="index.css">
   <script src="dist/index.js" type="module"></script>
   <title>Task List</title>
+  <style>
+    #list {
+      list-style: none;
+      padding: 0;
+    }
+  </style>
 </head>
 
 <body>
   <h1>
     <center>To-Do List</center>
   </h1>
-  <ul id="list"></ul>
   <form id="new-task-form">
     <input type="text" id="new-task-title" placeholder="Enter a new task...">
     <button type="submit">Add</button>
   </form>
+  <ul id="list"></ul>
 </body>
 
 </html>

@@ -35,6 +35,7 @@ form?.addEventListener("submit", (e) => {
     createdAt: new Date(),
   };
   tasks.push(newTask);
+  saveTasks()
 
   addListItem(newTask);
   input.value = "";
@@ -87,7 +88,6 @@ function deleteTask(task: Task) {
   }
 }
 
-// so that the user does not loose the tasks they made a list of
 function saveTasks() {
   localStorage.setItem("TASKS", JSON.stringify(tasks));
 }
